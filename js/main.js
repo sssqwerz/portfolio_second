@@ -192,6 +192,17 @@ $(function () {
         $(this).parents('.wide_play').fadeOut();
     })
 
+    $('.sis>div').on('click', function (e) {
+        e.preventDefault();
+        let i = $(this).index();
+        $('.bro>div').eq(i).fadeIn().siblings().hide();
+    });
+
+    $('.bro>div .close').on('click', function () {
+        $(this).parents('.wide_play').fadeOut();
+    })
+
+
     $('.cont8_up>li').on('click', function (e) {
         e.preventDefault();
         let i = $(this).index();
